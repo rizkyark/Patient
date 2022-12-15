@@ -1,0 +1,2 @@
+phalcon model User --name=users
+phalcon controller User
