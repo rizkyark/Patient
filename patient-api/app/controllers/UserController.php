@@ -15,6 +15,7 @@ class UserController extends \Phalcon\Mvc\Controller
 
         $result = [
             'code' => 200,
+            'response' => 'Success',
             'msg' => 'Success get data!',
             'data' => $user
         ];
@@ -38,7 +39,7 @@ class UserController extends \Phalcon\Mvc\Controller
             $result = [
                 'code' => 200,
                 'response' => 'Success',
-                'message' => 'The user with id '.$id.' data is succesfully appeared!',
+                'msg' => 'Success show user with id '.$id,
                 'data' => $user
             ];
 
@@ -48,7 +49,7 @@ class UserController extends \Phalcon\Mvc\Controller
             $result = [
                 'code' => 400,
                 'response' => 'Failed',
-                'message' => 'The user with id '.$id.' data is not found!',
+                'msg' => 'Cant find user with id '.$id,
                 'data' => null
             ];
 
@@ -75,6 +76,7 @@ class UserController extends \Phalcon\Mvc\Controller
         $response = new Response();
         $result = [
             'code' => 200,
+            'response' => 'Success',
             'msg' => 'Success Create User!',
             'data' => $user
         ];
@@ -107,6 +109,7 @@ class UserController extends \Phalcon\Mvc\Controller
 
             $result = [
                 'code' => 200,
+                'response' => 'Success',
                 'msg' => 'Success update user data with id: '.$id,
                 'data' => $user
             ];
@@ -115,6 +118,7 @@ class UserController extends \Phalcon\Mvc\Controller
         } else {
             $result = [
                 'code' => 400,
+                'response' => 'Failed',
                 'msg' => 'Failed update user data with id: '.$id,
             ];
 
@@ -141,6 +145,7 @@ class UserController extends \Phalcon\Mvc\Controller
 
             $result = [
                 'code' => 200,
+                'response' => 'Success',
                 'msg' => 'Success delete user data with id: '.$id,
                 'data' => $user
             ];
@@ -149,6 +154,7 @@ class UserController extends \Phalcon\Mvc\Controller
         } else {
             $result = [
                 'code' => 400,
+                'response' => 'Failed',
                 'msg' => 'Failed delete user data with id: '.$id,
             ];
 
